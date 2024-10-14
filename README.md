@@ -1,2 +1,2 @@
-# CS331_CV_Face_Recognition
+# CS331 Advanced Computer Vision
  
