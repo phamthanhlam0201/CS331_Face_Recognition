@@ -1,0 +1,40 @@
+.myapp {
+    display: flex;
+    width: 90vw;
+    height: 80vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    }
+.video-pos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    position: relative;
+}
+.start,
+.end {
+    top: 80%;
+    cursor: pointer;
+    text-align: center;
+    width: 10%;
+    height: 5%;
+    background-color: rgb(195, 243, 243);
+    border-radius: 15px;
+}
+  
+.start {
+margin-left: 40%;
+}
+
+.end {
+    margin-right: 30%;}
+
+.video-pos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    position: relative;
+}

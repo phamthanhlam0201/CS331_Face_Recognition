@@ -1,0 +1,29 @@
+.myapp {
+    display: flex;
+    width: 90vw;
+    height: 80vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    }
+button {
+    position: absolute;
+    top: 95%;
+    cursor: pointer;
+    text-align: center;
+    width: 10%;
+    height: 4%;
+    background-color: rgb(195, 243, 243);
+    border-radius: 15px;
+    right:40%;
+    z-index: 2;
+    margin-top: 1%;
+  }
+
+.video-pos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    position: relative;
+}

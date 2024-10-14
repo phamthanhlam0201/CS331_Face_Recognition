@@ -1,0 +1,87 @@
+EditData.css
+
+.detected-faces-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2%;
+    overflow: auto;
+  }
+  
+h2 {
+  margin-top: 0; 
+  margin-bottom: 1%; 
+  text-align: center;
+}
+
+.faces-table {
+  width: 100%;
+  max-width: 100vw;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
+
+.faces-table td {
+  border: 2px solid black;
+  overflow: hidden;
+  padding: 1%;
+}
+
+.face-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.face-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.faces-table img {
+  min-width: 90x;
+  min-height: 160px;
+  max-width: 120x;
+  max-height: 190px;
+  object-fit: cover;
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+
+button {
+  border: 1 solid white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: lime;
+}
+
+button:active {
+  background-color: #e2d1f9;
+}
+button.save-container {
+    position: sticky;
+    bottom: 0;
+    left:90%;
+    margin: 1%;
+    z-index: 1;
+}
+
+@media (max-width: 600px) {
+h2 {
+  font-size: 1.5rem;
+}
+
+
+.faces-table {
+  max-width: 100%;
+  max-height: 100%;
+}
+}
+
