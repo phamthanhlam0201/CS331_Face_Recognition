@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import cv2
 # from mtcnn.mtcnn import MTCNN
 # from tensorflow.keras.applications.vgg16 import VGG16, preprocess_input
-from tensorflow.keras.applications.inception_resnet_v2 import InceptionResNetV2, preprocess_input
+from tensorflow.keras.applications.mobilenet import MobileNet, preprocess_input
 from tensorflow.keras.preprocessing import image
 import numpy as np
 import json
@@ -52,7 +52,7 @@ class ConnectionManager:
 manager = ConnectionManager()
 
 # Cấu hình mô hình và ngưỡng
-inception_resnet_model = InceptionResNetV2(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
+mobilenet_model = MobileNet(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
 haar_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 FEATURE_THRESHOLD = 0.7
@@ -76,8 +76,8 @@ def extract_features(img):
     img = np.expand_dims(img, axis=0)
     img = preprocess_input(img)
     
-    # Replace VGG16 with InceptionResNetV2
-    features = inception_resnet_model.predict(img)
+    # Replace VGG16 with MobileNet
+    features = mobilenet_model.predict(img)
     return features.flatten()
 
 def detect_faces(img):
